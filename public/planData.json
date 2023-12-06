@@ -1,0 +1,48 @@
+[
+  {
+    "id": 29,
+    "name": "perclick",
+    "value": 847
+  },
+
+  {
+    "id": 30,
+    "name": "monthly",
+    "value": 842
+  },
+  {
+    "id": 31,
+    "name": "quarterly",
+    "value": 843
+  },
+  {
+    "id": 32,
+    "name": "yearly",
+    "value": 844
+  },
+  {
+    "id": 33,
+    "name": "half-yearly",
+    "value": 846
+  },
+  {
+    "id": 34,
+    "name": "teacherplan",
+    "value": 848
+  },
+  {
+    "id": 35,
+    "name": "student-plan",
+    "value": 849
+  },
+  {
+    "id": 36,
+    "name": "course-plan",
+    "value": 851
+  },
+  {
+    "id": 36,
+    "name": "assesment-plan",
+    "value": 852
+  }
+]

@@ -1,0 +1,18 @@
+.multiSelectContainer input{
+    width:  100% !important;
+}
+
+.teacherLocation .optionListContainer{
+    /* position: absolute !important; */
+    z-index: 80 !important;
+}
+
+.location .search-wrapper{
+    flex-wrap: wrap !important;
+}
+
+.location .search-wrapper .span{
+    overflow-wrap: break-word;
+  word-wrap: break-word; /* For wider browser support */
+  display: block !important;
+}

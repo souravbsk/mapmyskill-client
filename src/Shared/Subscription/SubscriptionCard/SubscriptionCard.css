@@ -1,0 +1,15 @@
+.subscriptionDesc ul > li{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.subscriptionDesc ol > li{
+    list-style-type: decimal;
+    list-style-position: inside;
+
+}
+
+.subscriptionDesc u{
+    text-decoration: underline !important;
+}
+

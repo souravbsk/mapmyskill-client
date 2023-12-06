@@ -1,0 +1,103 @@
+
+/* -----------------------footer css start  ----------- */
+.footer{
+    background-color: black;
+    /* height: 70vh; */
+    padding-top: 10vh;
+
+}.footer ul{
+        margin-bottom: 7rem;
+}
+
+.footer ul li,h4{
+    color: white;
+}
+
+.footer ul li {
+    color: white;
+    margin-bottom: 6px;
+    font-size: 1.1vw;
+}
+
+.footer ul li:hover{
+    cursor: pointer;
+    color: red;
+}
+
+
+.footer h4 {
+    /* margin-left: 2.3vw; */
+        /* border-bottom: 1px solid; */
+        /* margin-left: unset; */
+        /* display: inline-block; */
+        font-size: 1.5vw;
+        margin-bottom: 1vh;
+}
+
+.nav-list{
+    border-bottom: 1px solid white;
+}
+
+.footer p{
+    color: white;
+    margin-top: 3vh;
+    margin-bottom: unset;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .footer {
+        padding-top: 7vh;
+    }
+    .footer h4 {
+        margin-left: 2.8vw;
+    }
+    .footer ul li {
+        font-size: 15px;
+    }
+    .footer ul {
+        margin-bottom: 5rem;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .footer {
+        padding-top: 6vh;
+    }
+
+    .footer ul {
+        margin-bottom: 2rem;
+    }
+
+    .footer ul li {
+        font-size: 20px;
+    }
+    .footer h4 {
+        margin-left: 4vw;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .footer ul li {
+        font-size: 15px;
+    }
+
+    .footer h4 {
+        margin-left: 8.3vw;
+    }
+
+    .footer ul {
+        margin-bottom: 2rem;
+    }
+
+    .footer {
+        padding-top: 5vh;
+    }
+}
+
+/* -----------------------footer css end  ----------- */

@@ -1,0 +1,49 @@
+#outer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#outer-box h3 {
+    margin-bottom: 50px;
+}
+
+#outer-box .box {
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 10px;
+    background-color: white;
+    padding: 3vh 1vw;
+    padding: 4vh 2vw 4vh 2vw;
+}
+
+
+
+#outer-box .box .course-type {
+    margin-top: 2.5vh;
+}
+
+#outer-box .box .input-container {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#outer-box .box .twelve {
+    margin-top: 5vh;
+}
+
+#outer-box .box .input-container .input-holder {
+    width: 100%;
+}
+
+#outer-box .box .input-container .input-holder select {
+    width: 100%;
+    height: 6vh;
+    border-radius: 5px;
+}
+
+#outer-box .box .education {
+    margin-top: 6vh;
+}

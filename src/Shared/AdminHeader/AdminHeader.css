@@ -1,0 +1,32 @@
+
+/* ------------header design start------------ */
+#header {
+    height: 60px;
+    width: 95%;
+    border-radius: 13px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 0 0 2px 1px #999;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 17px;
+    padding-right: 34px;
+}
+
+#header h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #071425;
+}
+
+#header .iconn {
+    font-size: 26px;
+    color: #071425;
+}
+
+#header .iconn:nth-child(2) {
+    font-size: 31px;
+}
+
+/* ------------header design end------------ */

@@ -1,0 +1,4 @@
+.active{
+    @apply bg-[#040936]
+    text-white
+}

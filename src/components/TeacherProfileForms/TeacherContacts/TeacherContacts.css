@@ -1,0 +1,66 @@
+#con-info {
+    height: 200vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#con-info .box {
+    width: 38vw;
+    min-width: 355px;
+    /* height: 80vh; */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3vh 1.5vw;
+}
+
+#con-info .box .input-container {
+    display: inline-block;
+    margin-bottom: 2vh;
+}
+
+#con-info .box .input-container .react-tel-input {
+    width: 105% !important;
+}
+
+#con-info .box .con-address-heading {
+    margin-top: 3vh;
+}
+
+#con-info .box .address {
+    display: block;
+}
+
+#con-info .box .input-container .radio-btn {
+    margin-left: 1vw;
+}
+
+#con-info .box .input-container .gender-radio-btn {
+    margin-left: 1.5vw;
+}
+
+#con-info .box .last-name {
+    margin-left: 3.8vw;
+}
+
+#con-info .box .marital {
+    margin-left: 2.5vw;
+}
+
+#con-info .box .marital select {
+    width: 14vw;
+}
+
+#con-info .box .privacy {
+    margin-left: 2.5vw;
+}
+
+#con-info .box .vehicles select {
+    width: 16vw;
+}
+
+#con-info .box .whatsapp {
+    margin-left: 4vw;
+}

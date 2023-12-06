@@ -1,0 +1,25 @@
+/* .subject-checkbox .optionListContainer.displayNone {
+    display: block !important;
+}
+
+.subject-checkbox .multiSelectContainer ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+    border: none !important;
+}
+
+.subject-checkbox .multiSelectContainer ul li {
+    background-color: rgb(207, 219, 219) !important;
+    color: black !important;
+    border-radius: 10px;
+    padding: 4px 10px;
+}
+
+.subject-checkbox .searchWrapper {
+    display: none;
+}
+
+.subject-checkbox .notFound {
+    display: none !important;
+} */

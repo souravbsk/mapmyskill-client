@@ -1,0 +1,6 @@
+.searchWrapper{
+    display: flex;
+}
+.searchWrapper .chip{
+    padding-right: 20px;
+}

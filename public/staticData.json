@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "name": "Gender",
+    "value": 68
+  },
+  {
+    "id": 2,
+    "name": "InterestedIn",
+    "value": 69
+  },
+  {
+    "id": 3,
+    "name": "InstituteCategory",
+    "value": 70
+  },
+  {
+    "id": 4,
+    "name": "teacherlocation",
+    "value": 71
+  },
+  {
+    "id": 5,
+    "name": "teacherUniversityName",
+    "value": 73
+  },
+  {
+    "id": 6,
+    "name": "teacherServicePeriod",
+    "value": 74
+  },
+  {
+    "id": 7,
+    "name": "teacherExperienceYear",
+    "value": 75
+  },
+  {
+    "id": 8,
+    "name": "teacherBoard",
+    "value": 76
+  },
+  {
+    "id": 9,
+    "name": "language",
+    "value": 77
+  },
+  {
+    "id": 10,
+    "name": "teacherEducationLevel",
+    "value": 79
+  },
+  {
+    "id": 11,
+    "name": "passingYear",
+    "value": 82
+  },
+  {
+    "id": 12,
+    "name": "courseType",
+    "value": 83
+  },
+  {
+    "id": 13,
+    "name": "teacherInstituteName",
+    "value": 85
+  },
+  {
+    "id": 14,
+    "name": "teacherSpecialization",
+    "value": 86
+  },
+  {
+    "id": 15,
+    "name": "addressType",
+    "value": 87
+  },
+  {
+    "id": 16,
+    "name": "relationWithStudent",
+    "value": 88
+  },
+  {
+    "id": 17,
+    "name": "studentTrainingLocation",
+    "value": 72
+  },
+  {
+    "id": 18,
+    "name": "studentsInGroup",
+    "value": 92
+  },
+  {
+    "id": 19,
+    "name": "sessionsPerWeek",
+    "value": 93
+  },
+  {
+    "id": 20,
+    "name": "contactDisplay",
+    "value": 94
+  },
+  {
+    "id": 21,
+    "name": "bestTimeToCall",
+    "value": 90
+  },
+  {
+    "id": 22,
+    "name": "genderPreference",
+    "value": 91
+  },
+  {
+    "id": 23,
+    "name": "maritalStatus",
+    "value": 96
+  },
+  {
+    "id": 24,
+    "name": "teacherAgeGroup",
+    "value": 89
+  },
+  {
+    "id": 25,
+    "name": "vehicleOwned",
+    "value": 97
+  },
+  {
+    "id": 26,
+    "name": "documentType",
+    "value": 98
+  },
+  {
+    "id": 27,
+    "name": "verifyStatus",
+    "value": 99
+  },
+  {
+    "id": 28,
+    "name": "planperiod",
+    "value": 100
+  },
+  {
+    "id": 29,
+    "name": "plantypes",
+    "value": 101
+  }
+]

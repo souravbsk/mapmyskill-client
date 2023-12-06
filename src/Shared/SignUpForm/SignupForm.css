@@ -1,0 +1,372 @@
+.lay {
+    padding: 0 20vw;
+    margin-top: 100px;
+}
+
+.input-container {
+    display: inline-block;
+    padding: 10px 5px;
+    width: 50%;
+    position: relative;
+    margin-bottom: 0px;
+
+}
+
+.input-conn {
+    padding: 18px 5px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 91% !important;
+}
+
+.input-container .input-conn {
+    position: absolute !important;
+    width: 91%;
+
+}
+
+.input-conn .input-holder {
+    position: absolute !important;
+    width: 100% !important;
+}
+
+.signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfbfb;
+    padding: 0 15vw;
+}
+
+.signup_holder {
+    background-color: white;
+    /* height: 58vh; */
+    width: 50vw;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px #efefef;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.signup_holder .inputt_holderr {
+    position: relative;
+    width: 50%;
+    padding: 10px;
+}
+
+.inputt_holderrrrr {
+    display: flex;
+    align-items: center;
+}
+
+.inputt_holderr .list_disp {
+    position: absolute;
+    background: white !important;
+    width: 94%;
+    top: 60px;
+    left: 11px;
+    padding: 0 10px;
+    z-index: 10000;
+    height: 135px;
+    overflow: scroll;
+    box-shadow: 1px 3px 3px 3px #ccc;
+}
+
+.inputt_holderr .list_hide {
+    display: none;
+}
+
+.inputt_holderr ul::-webkit-scrollbar {
+    display: none;
+}
+
+.inputt_holderr .gpsicon {
+    position: absolute;
+    right: 13px;
+    top: 27px;
+    color: #1976d2;
+}
+
+.signup_holder .inputt_holderrr {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.terms {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.terms p {
+    margin: 0;
+}
+
+.termsNcondition {
+    width: 100% !important;
+    text-align: left !important;
+    margin: 0 !important;
+    margin-top: 8px !important;
+    padding-left: 10px !important;
+    color: red !important;
+}
+
+.signup_holder .inputt_holderr .data_container {
+    position: relative;
+    width: 100%;
+}
+
+.signup_holder .inputt_holderr .data_containerrr {
+    margin-top: 13px;
+}
+
+.signup_holder .inputt_holderrr .data_container {
+    position: relative;
+    width: 100%;
+}
+
+.signup_holder .inputt_holderr .select_container {
+    padding: 7px 0;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.signup-header {
+    height: 12vh;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(211, 210, 210);
+}
+
+.tutor-signup {
+    width: 100%;
+    margin-top: 60px;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tutor-signupp {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.tutor-signup .second_step {
+    color: red;
+    font-weight: 700;
+    font-size: 3vw;
+    padding: 49px auto;
+}
+
+.tutor-signup .first_step {
+    color: black;
+    font-weight: 700;
+    font-size: 2vw;
+    padding: 49px auto;
+
+}
+
+.tutor-signup .heading_border {
+    border-bottom: 2px solid red;
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    margin-bottom: 20px;
+}
+
+.tutor-signup p {
+    /* color: white; */
+    width: 60vw;
+    margin-bottom: 5vh;
+}
+
+.progress-bar {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(251, 255, 255);
+    box-shadow: 1px 2px 0 0 #ccc;
+    margin: 21px 0;
+}
+
+.signup_holder form {
+     width: 40vw;
+    margin: 4vh auto;
+    background-color: white;
+    padding: 6vh;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .06);
+}
+
+.signup_holder form h3 {
+    font-weight: 700;
+    margin-bottom: 6vh;
+    margin-top: -3vh;
+}
+
+.signup_holder form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.signup_holder form p {
+    margin-top: 65px;
+    margin-bottom: 0rem;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-container select {
+    width: 300px;
+    border-radius: 7px;
+    padding: 5px;
+    border: 1px solid red;
+    color: #0a0a56;
+}
+
+.select-container button {
+    width: 120px;
+    background: red;
+    padding: 5px 0;
+    color: white;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.signUp {
+    background: #1976d2;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 10px 58px;
+    margin-left: 9px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.postallist:hover {
+    cursor: pointer;
+}
+
+.userrrerr {
+    margin: 0;
+    float: left;
+    margin-top: 5px;
+    color: red;
+}
+
+.pincodeLocation ul{
+    /* position: absolute; */
+    /* z-index: 10; */
+    /* background-color: gray; */
+    /* color: white; */
+    /* max-width: 230px; */
+}
+
+.pincodeLocation ul li{
+    /* word-wrap: break-word; */
+    overflow-wrap: break-word;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .signup_holder form {
+        width: 80vw;
+        margin: 4vh auto;
+    }
+
+    .signup_holder form h3 {
+        font-size: 40px;
+    }
+
+    .signup_holder form label {
+        font-size: 25px;
+    }
+
+    .signup_holder form input {
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .signup_holder form {
+        width: 82vw;
+        margin: 2vh auto;
+    }
+
+    .lay {
+        padding: 0 5vw
+    }
+
+    .signup-form {
+        padding: 0 6vw;
+    }
+
+    .signup_holder {
+        width: 88vw;
+    }
+
+    .signup_holder .inputt_holderr {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .signup_holder form h3 {
+        font-size: 30px;
+    }
+
+    .signup_holder form label {
+        font-size: 23px;
+    }
+
+    .signup_holder form {
+        padding: 2vh;
+    }
+
+    .tutor-signup .first_step {
+        font-size: 6vw;
+    }
+
+}
+
+@media only screen and (max-width: 280px) {
+    .signup_holder form h3 {
+        font-size: 20px;
+    }
+
+    .signup_holder form {
+        width: 88vw;
+    }
+
+    .signup_holder form label {
+        font-size: 18px;
+    }
+}
+
+
+/* new code  */
+
+.inputt_holderr .react-tel-input .form-control{
+width: 80% !important;
+}
+
