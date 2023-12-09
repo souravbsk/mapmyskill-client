@@ -1,7 +1,9 @@
 import React from "react";
 import Request from "./Request/Request";
 import HowItWork from "./HowItWork/HowItWork";
-import NewBanner from "./newBanner/newBanner";
+
+import NewBanner from "./newBanner/NewBanner.jsx";
+
 import Services from "./Services/Services";
 import Testimonials from "./Testimonials/Testimonials";
 import Tutors from "./Tutors/Tutors";
@@ -19,6 +21,7 @@ const Home = () => {
         <Services></Services>
         <Testimonials></Testimonials>
         <Faq></Faq>
+
         <Tutors></Tutors>
         <Stats></Stats>
       </div>
