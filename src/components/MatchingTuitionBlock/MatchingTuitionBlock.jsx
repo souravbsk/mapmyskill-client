@@ -34,7 +34,7 @@ const MatchingTuitionBlock = ({ jobs, user }) => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:8080/api/contactsviewed/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/contactsviewed/${user?.userid}`)
         .then((response) => {
           console.log("uncloked response", response);
           const unlock = response.data.map((item) => {
@@ -55,7 +55,7 @@ const MatchingTuitionBlock = ({ jobs, user }) => {
   const handleUnlock = () => {
     axios
       .get(
-        `http://localhost:8080/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
+        `http://tutorapp-server.vercel.app/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
       )
       .then((res1) => {
         if (res1.data.length == 0) {
@@ -84,7 +84,7 @@ const MatchingTuitionBlock = ({ jobs, user }) => {
 
           axios
             .post(
-              `http://localhost:8080/api/contactsviewed`,
+              `http://tutorapp-server.vercel.app/api/contactsviewed`,
               contactViewedPayload
             )
             .then((res2) => {
@@ -93,7 +93,7 @@ const MatchingTuitionBlock = ({ jobs, user }) => {
               if (res2.statusText == "OK") {
                 axios
                   .put(
-                    `http://localhost:8080/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
+                    `http://tutorapp-server.vercel.app/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
                   )
                   .then((res3) => {
                     console.log("plan update res", res3);
@@ -122,7 +122,7 @@ const MatchingTuitionBlock = ({ jobs, user }) => {
           <div className="flex flex-col gap-5  px-8 py-4">
             <div className="mx-auto">
               <img
-                src={`http://localhost:8080/${jobs?.profileimagepath}`}
+                src={`http://tutorapp-server.vercel.app/${jobs?.profileimagepath}`}
                 className="h-[px] w-[250px]"
               />
             </div>

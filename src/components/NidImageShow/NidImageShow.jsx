@@ -21,7 +21,7 @@ const NidImageShow = ({ setShow, isShow,setReFetch,reFetch, ImageData, handleVie
     };  
     if (userId) {
       axios
-        .put(`http://localhost:8080/api/documents/update/${userId}`, payload)
+        .put(`http://tutorapp-server.vercel.app/api/documents/update/${userId}`, payload)
         .then((res) => {
           console.log(res);
           if(res?.data?.data?.affectedRows>0){
@@ -55,14 +55,14 @@ const NidImageShow = ({ setShow, isShow,setReFetch,reFetch, ImageData, handleVie
             <div className="">
               <h4 className="text-black mb-3">Front Side:</h4>
               <img
-                src={`http://localhost:8080/${ImageData?.documentpathF}`}
+                src={`http://tutorapp-server.vercel.app/${ImageData?.documentpathF}`}
                 className="h-[300px] w-[400px] rounded-sm  border  shadow-lg"
               />
             </div>
             <div className="">
               <h4 className="text-black mb-3">Back Side:</h4>
               <img
-                src={`http://localhost:8080/${ImageData?.documentpathB}`}
+                src={`http://tutorapp-server.vercel.app/${ImageData?.documentpathB}`}
                 className="h-[300px] w-[400px] rounded-sm  border  shadow-lg"
               />
             </div>

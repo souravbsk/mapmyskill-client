@@ -32,20 +32,20 @@ function ContactInformation() {
   useEffect(() => {
     if (user?.userid) {
       axios
-        .get(`http://localhost:8080/api/profile/byUserId/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/profile/byUserId/${user?.userid}`)
         .then((response) => {
           console.log(response,"hello world");
           setUserDetails(response.data)
           if (response.statusText == "OK") {
             axios
-              .get(`http://localhost:8080/api/users/${user?.userid}`)
+              .get(`http://tutorapp-server.vercel.app/api/users/${user?.userid}`)
               .then((response) => {
                 // console.log("user response",response);
 
                 response?.data ? setUserDetailsTwo(response?.data) : null;
                 if (response.statusText == "OK") {
                   axios
-                    .get(`http://localhost:8080/api/address/${user?.userid}`)
+                    .get(`http://tutorapp-server.vercel.app/api/address/${user?.userid}`)
                     .then((response) => {
                       if (user?.roleid == 3) {
                         setTeacherAddress(response?.data?.data);

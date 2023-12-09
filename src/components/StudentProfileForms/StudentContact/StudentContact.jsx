@@ -23,7 +23,7 @@ function StudentContact() {
       setUserId(userInfoParse?.userID);
       axios
         .get(
-          `http://localhost:8080/api/profile/byUserId/${userInfoParse?.userID}`
+          `http://tutorapp-server.vercel.app/api/profile/byUserId/${userInfoParse?.userID}`
         )
         .then((res) => {
           //console.log(res);
@@ -95,7 +95,7 @@ function StudentContact() {
 
     if (userId) {
       axios
-        .put(`http://localhost:8080/api/profile/${userId}`, contactInfoPayload)
+        .put(`http://tutorapp-server.vercel.app/api/profile/${userId}`, contactInfoPayload)
         .then((res) => {
           //console.log(res);
           if (res.data.success) {
@@ -112,7 +112,7 @@ function StudentContact() {
             ];
 
             axios
-              .post("http://localhost:8080/api/address", userAddress)
+              .post("http://tutorapp-server.vercel.app/api/address", userAddress)
               .then((res) => {
                 //console.log(res);
                 if (res.data.success) {
@@ -127,7 +127,7 @@ function StudentContact() {
                   };
                   axios
                     .post(
-                      "http://localhost:8080/api/studentpersonalinfo",
+                      "http://tutorapp-server.vercel.app/api/studentpersonalinfo",
                       personalInfoPayload
                     )
                     .then((res) => {

@@ -11,12 +11,12 @@ const Teaches = ({ tutorsData }) => {
     useEffect(() => {
       if (id) {
         axios
-          .get(`http://localhost:8080/api/teachertraininglevel/${id}`)
+          .get(`http://tutorapp-server.vercel.app/api/teachertraininglevel/${id}`)
           .then((res) => {
             if (res?.data?.success) {
               const segmentData = res?.data?.data;
               axios
-                .get(`http://localhost:8080/api/teachersubject/${id}`)
+                .get(`http://tutorapp-server.vercel.app/api/teachersubject/${id}`)
                 .then((subRes) => {
                  
                   const subjectData = subRes?.data;

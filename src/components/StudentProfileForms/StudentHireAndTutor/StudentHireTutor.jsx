@@ -37,7 +37,7 @@ const StudentHireTutor = () => {
   const [segments, setSegments] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/segment`)
+      .get(`http://tutorapp-server.vercel.app/api/segment`)
       .then((response) => {
         // console.log(response.data);
         if (response?.data) {
@@ -52,7 +52,7 @@ const StudentHireTutor = () => {
   const handleSegmentChange = (value) => {
     // Fetch subjects based on the selected segment
     axios
-      .get(`http://localhost:8080/api/subject/bysegment/${value}`)
+      .get(`http://tutorapp-server.vercel.app/api/subject/bysegment/${value}`)
       .then((response) => {
         setSubjects(response.data);
       })
@@ -135,14 +135,14 @@ const StudentHireTutor = () => {
     };
 
     axios
-      .post("http://localhost:8080/api/studentlevel", studentLevelPayload)
+      .post("http://tutorapp-server.vercel.app/api/studentlevel", studentLevelPayload)
       .then((res) => {
         //console.log(res);
         if (res.data.success) {
           //console.log(subjectPayload);
           axios
             .post(
-              "http://localhost:8080/api/teachersubject/studentSubject",
+              "http://tutorapp-server.vercel.app/api/teachersubject/studentSubject",
               subjectPayload
             )
             .then((response) => {

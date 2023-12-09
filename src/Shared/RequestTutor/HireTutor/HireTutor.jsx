@@ -48,7 +48,7 @@ const HireTutor = () => {
     //============Options from database for fields- START==================
     useEffect(() => {
         axios
-            .get(`http://localhost:8080/api/segment`)
+            .get(`http://tutorapp-server.vercel.app/api/segment`)
             .then((response) => {
                 // console.log(response.data);
                 if (response?.data) {
@@ -63,7 +63,7 @@ const HireTutor = () => {
     const handleSegmentChange = (value) => {
         // Fetch subjects based on the selected segment
         axios
-            .get(`http://localhost:8080/api/subject/bysegment/${value}`)
+            .get(`http://tutorapp-server.vercel.app/api/subject/bysegment/${value}`)
             .then((response) => {
                 setSubjects(response.data);
             })

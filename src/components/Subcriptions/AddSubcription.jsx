@@ -76,7 +76,7 @@ const AddSubcription = ({ open, setOpen, reFetch, setRefetch }) => {
     console.log(addNewPlan);
 
     axios
-      .post("http://localhost:8080/api/subscriptionplans", addNewPlan)
+      .post("http://tutorapp-server.vercel.app/api/subscriptionplans", addNewPlan)
       .then((res) => {
         console.log(res);
         if (res?.data?.id) {

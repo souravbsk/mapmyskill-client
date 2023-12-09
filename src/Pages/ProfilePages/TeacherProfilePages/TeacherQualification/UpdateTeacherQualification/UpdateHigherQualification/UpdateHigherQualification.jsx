@@ -125,7 +125,7 @@ const UpdateHigherQualification = ({
   const handleDeleteBlock = (index, educationId) => {
     if (educationId) {
       // axios
-      //   .delete(`http://localhost:8080/api/teachereducation/${educationId}`)
+      //   .delete(`http://tutorapp-server.vercel.app/api/teachereducation/${educationId}`)
       //   .then((res) => {
       //     if (res?.data) {
       //       const updatedBlocks = [...blocks];

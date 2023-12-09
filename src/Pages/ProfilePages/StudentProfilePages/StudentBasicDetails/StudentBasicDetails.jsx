@@ -29,7 +29,7 @@ function StudentBasicDetails() {
   useEffect(() => {
     if (user?.userid) {
       axios
-        .get(`http://localhost:8080/api/profile/byUserId/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/profile/byUserId/${user?.userid}`)
         .then((response) => {
           if (response?.data) {
             // console.log(response?.data);
@@ -37,7 +37,7 @@ function StudentBasicDetails() {
             if (response.statusText == "OK") {
               axios
                 .get(
-                  `http://localhost:8080/api/studentpersonalinfo/${user?.userid}`
+                  `http://tutorapp-server.vercel.app/api/studentpersonalinfo/${user?.userid}`
                 )
                 .then((response) => {
                   if (response?.data) {
@@ -98,14 +98,14 @@ function StudentBasicDetails() {
         if (result.isConfirmed) {
           axios
             .put(
-              `http://localhost:8080/api/profile/${user?.userid}`,
+              `http://tutorapp-server.vercel.app/api/profile/${user?.userid}`,
               profilePayload
             )
             .then((response) => {
               if (response.statusText == "OK") {
                 axios
                   .put(
-                    `http://localhost:8080/api/studentpersonalinfo/${user?.userid}`,
+                    `http://tutorapp-server.vercel.app/api/studentpersonalinfo/${user?.userid}`,
                     personalInfoPayload
                   )
                   .then((response) => {

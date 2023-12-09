@@ -35,7 +35,7 @@ const NidFeedback = ({
     if (ImageData?.userid) {
       axios
         .put(
-          `http://localhost:8080/api/documents/update/${ImageData?.userid}`,
+          `http://tutorapp-server.vercel.app/api/documents/update/${ImageData?.userid}`,
           payload
         )
         .then((res) => {

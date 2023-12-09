@@ -23,7 +23,7 @@ const MonitorSection = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:8080/api/studentlevel?user=${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/studentlevel?user=${user?.userid}`)
         .then((jobRes) => {
           if (jobRes.statusText == "OK") {
             setTuitionJobs(jobRes?.data);
@@ -31,7 +31,7 @@ const MonitorSection = () => {
         });
 
       axios
-        .get(`http://localhost:8080/api/userreviews/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/userreviews/${user?.userid}`)
         .then((reviewRes) => {
           console.log(reviewRes);
           if (reviewRes?.data?.success) {
@@ -40,7 +40,7 @@ const MonitorSection = () => {
         });
 
       axios
-        .get(`http://localhost:8080/api/messagetoteacher/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/messagetoteacher/${user?.userid}`)
         .then((res) => {
           // console.log("enquiries", res.data)
           setEnquiriesData(res?.data);

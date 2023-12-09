@@ -57,7 +57,7 @@ const UpdateTeacherPersonalInformation = ({ user, personalInfo }) => {
 
     axios
       .put(
-        `http://localhost:8080/api/personalinfo/${userid}`,
+        `http://tutorapp-server.vercel.app/api/personalinfo/${userid}`,
         personalInformationPayload
       )
       .then((response) => {

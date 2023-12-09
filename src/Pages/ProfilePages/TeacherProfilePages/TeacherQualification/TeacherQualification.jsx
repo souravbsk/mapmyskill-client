@@ -25,7 +25,7 @@ const TeacherQualification = () => {
           //console.log(dataValue, "language");
           axios
 
-        .get(`http://localhost:8080/api/teacherschooling/${user?.userid}?languageId=${dataValue?.value}`)
+        .get(`http://tutorapp-server.vercel.app/api/teacherschooling/${user?.userid}?languageId=${dataValue?.value}`)
         .then((res) => {
           if (res?.data) {
             setSchoolingQualificationData(res.data);

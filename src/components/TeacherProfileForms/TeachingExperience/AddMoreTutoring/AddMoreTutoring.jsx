@@ -25,7 +25,7 @@ const AddMoreTutoring = ({ blocks, setBlocks, user }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/category")
+      .get("http://tutorapp-server.vercel.app/api/category")
       .then((response) => {
         setCategories(response.data);
       })
@@ -61,7 +61,7 @@ const AddMoreTutoring = ({ blocks, setBlocks, user }) => {
 
     // Fetch segments based on the selected category
     axios
-      .get(`http://localhost:8080/api/segment/bycategory/${value}`)
+      .get(`http://tutorapp-server.vercel.app/api/segment/bycategory/${value}`)
       .then((response) => {
         // Update the 'segments' state for the specific block
         const updatedSegments = [...segments];
@@ -81,7 +81,7 @@ const AddMoreTutoring = ({ blocks, setBlocks, user }) => {
 
     // Fetch subjects based on the selected segment
     axios
-      .get(`http://localhost:8080/api/subject/bysegment/${value}`)
+      .get(`http://tutorapp-server.vercel.app/api/subject/bysegment/${value}`)
       .then((response) => {
         // Update the 'subjects' state for the specific block
         const updatedSubjects = [...subjects];

@@ -20,7 +20,7 @@ function StudentRequirement() {
     if (user) {
       axios
         .get(
-          `http://localhost:8080/api/studentlevel/findallbyid/${user?.userid}`
+          `http://tutorapp-server.vercel.app/api/studentlevel/findallbyid/${user?.userid}`
         )
         .then((response) => {
           console.log("student level data", response.data.data);

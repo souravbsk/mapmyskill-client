@@ -44,7 +44,7 @@ const FeedBackModal = ({ jobs, isOpen, setOpen, user,
     console.log(newReviewSubmit);
 
     axios
-      .put("http://localhost:8080/api/userreviews", newReviewSubmit)
+      .put("http://tutorapp-server.vercel.app/api/userreviews", newReviewSubmit)
       .then((res) => {
         console.log(res);
         if (res?.data?.affectedRows > 0) {

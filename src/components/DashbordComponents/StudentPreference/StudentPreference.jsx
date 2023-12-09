@@ -14,7 +14,7 @@ function StudentPreference() {
     useEffect(() => {
         if (user?.userid) {
             axios
-                .get(`http://localhost:8080/api/studentlevel/${user?.userid}`)
+                .get(`http://tutorapp-server.vercel.app/api/studentlevel/${user?.userid}`)
                 .then((response) => {
                     if (response?.data) {
                         // console.log(response?.data);

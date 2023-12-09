@@ -10,7 +10,7 @@ const useFetchValue = (itemValue) => {
      .then(res => (res.json()))
      .then(data=>{
       const dataValue = data.find(item => item?.name.toLowerCase() == itemValue.toLowerCase())
-      axios.get('http://localhost:8080/api/systemlistitem')
+      axios.get('http://tutorapp-server.vercel.app/api/systemlistitem')
       .then(res => {
         if(res.statusText == "OK"){
           const allValue = res.data.filter(item => item?.listid == dataValue.value)

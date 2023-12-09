@@ -16,12 +16,12 @@ const TeacherSendMessage = () => {
   useEffect(() => {
     if (user?.userid && id) {
       axios
-        .get(`http://localhost:8080/api/teachertraininglevel/${id}`)
+        .get(`http://tutorapp-server.vercel.app/api/teachertraininglevel/${id}`)
         .then((res) => {
           if (res?.data?.success) {
             const segmentData = res?.data?.data;
             axios
-              .get(`http://localhost:8080/api/teachersubject/${id}`)
+              .get(`http://tutorapp-server.vercel.app/api/teachersubject/${id}`)
               .then((subRes) => {
                 const teacherSubject = Object.values(subRes?.data);
                 const subjectValue = teacherSubject.map((items) =>

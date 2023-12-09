@@ -60,7 +60,7 @@ const EmailVerifyCard = ({ email, userId }) => {
     }
 
     axios
-      .put(`http://localhost:8080/api/users/updateMobileEmail/${userId}`, {
+      .put(`http://tutorapp-server.vercel.app/api/users/updateMobileEmail/${userId}`, {
         email,
       })
       .then((res) => {
@@ -70,7 +70,7 @@ const EmailVerifyCard = ({ email, userId }) => {
             isEmailVarified: "N",
           };
           axios
-            .put(`http://localhost:8080/api/profile/${userId}`, EmailVerify)
+            .put(`http://tutorapp-server.vercel.app/api/profile/${userId}`, EmailVerify)
             .then((res) => {
               if (res.data.success) {
                 const userInfo = JSON.parse(localStorage.getItem("user_Info"));

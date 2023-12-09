@@ -87,7 +87,7 @@ const SignUp = () => {
         };
         axios
           .put(
-           ` http://localhost:8080/api/profile/${userInfo?.userID}`,
+           ` http://tutorapp-server.vercel.app/api/profile/${userInfo?.userID}`,
             EmailVerify
           )
           .then((res) => {

@@ -46,7 +46,7 @@ const TeacherContacts = () => {
       setUserId(userInfoParse?.userID);
       axios
         .get(
-          `http://localhost:8080/api/profile/byUserId/${userInfoParse?.userID}`
+          `http://tutorapp-server.vercel.app/api/profile/byUserId/${userInfoParse?.userID}`
         )
         .then((res) => {
           setUserInfo(res.data);
@@ -144,11 +144,11 @@ const TeacherContacts = () => {
 
     if (userId) {
       axios
-        .put(`http://localhost:8080/api/profile/${userId}`, contactInfoPayload)
+        .put(`http://tutorapp-server.vercel.app/api/profile/${userId}`, contactInfoPayload)
         .then((res) => {
           if (res.data.success) {
             axios
-              .post("http://localhost:8080/api/address", userAddress)
+              .post("http://tutorapp-server.vercel.app/api/address", userAddress)
               .then((res) => {
                 if (res.data.success) {
                   const personalInformationPayload = {
@@ -164,7 +164,7 @@ const TeacherContacts = () => {
                   };
                   axios
                     .post(
-                      "http://localhost:8080/api/personalinfo",
+                      "http://tutorapp-server.vercel.app/api/personalinfo",
                       personalInformationPayload
                     )
                     .then((res) => {

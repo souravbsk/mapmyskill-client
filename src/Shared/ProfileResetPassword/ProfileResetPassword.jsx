@@ -31,14 +31,14 @@ const ProfileResetPassword = () => {
             confirmButtonText: 'Yes, update it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.post(`http://localhost:8080/api/users/checkpassword/${user?.userid}`, oldPasswordPayload)
+                axios.post(`http://tutorapp-server.vercel.app/api/users/checkpassword/${user?.userid}`, oldPasswordPayload)
                     .then((response) => {
                         if (response?.statusText) {
                             if (newPassword === conNewPassword) {
                                 const passwordPayload = {
                                     password: newPassword
                                 }
-                                axios.put(`http://localhost:8080/api/users/updatepassword/${user?.userid}`, passwordPayload)
+                                axios.put(`http://tutorapp-server.vercel.app/api/users/updatepassword/${user?.userid}`, passwordPayload)
                                     .then((response) => {
                                         //console.log("password changed", response);
                                           Swal.fire(

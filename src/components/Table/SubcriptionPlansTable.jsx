@@ -25,7 +25,7 @@ const SubcriptionPlansTable = ({
   const { itemValue: perclickValue } = usePlanDataValue("perclick");
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/subscriptionplans/").then((res) => {
+    axios.get("http://tutorapp-server.vercel.app/api/subscriptionplans/").then((res) => {
       console.log(res);
       if (res.data) {
         console.log(res);

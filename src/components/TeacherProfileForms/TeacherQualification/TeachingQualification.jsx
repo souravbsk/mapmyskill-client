@@ -77,12 +77,12 @@ const TeachingQualification = () => {
 
     if (user) {
       axios
-        .post("http://localhost:8080/api/teacherschooling", schoolingBackgroud)
+        .post("http://tutorapp-server.vercel.app/api/teacherschooling", schoolingBackgroud)
         .then((res) => {
           if (res.data.success) {
             if (user) {
               axios
-                .post("http://localhost:8080/api/teachereducation", blocks)
+                .post("http://tutorapp-server.vercel.app/api/teachereducation", blocks)
                 .then((res) => {
                   if (res.data) {
                     const payloadLang = {
@@ -92,7 +92,7 @@ const TeachingQualification = () => {
                     };
                     axios
                       .post(
-                        "http://localhost:8080/api/systemlistdata",
+                        "http://tutorapp-server.vercel.app/api/systemlistdata",
                         payloadLang
                       )
                       .then((res) => {

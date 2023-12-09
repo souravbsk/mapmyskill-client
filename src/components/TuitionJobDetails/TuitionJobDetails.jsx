@@ -17,7 +17,7 @@ const TuitionJobDetails = () => {
     if (tuitionID?.id) {
       console.log(tuitionID.id);
       axios
-        .get(`http://localhost:8080/api/studentlevel/findbyid/${tuitionID?.id}`)
+        .get(`http://tutorapp-server.vercel.app/api/studentlevel/findbyid/${tuitionID?.id}`)
         .then((res) => {
           if (res?.data?.success) {
             setTuitionDetails(res?.data?.data);

@@ -66,7 +66,7 @@ function SubscriptionCard({ items }) {
     console.log(buyPlan);
 
     axios
-      .post(`http://localhost:8080/api/subscriptionusers`, buyPlan)
+      .post(`http://tutorapp-server.vercel.app/api/subscriptionusers`, buyPlan)
       .then((res) => {
         console.log(res);
         if (res?.data?.affectedRows > 0) {

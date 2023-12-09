@@ -151,7 +151,7 @@ const RequestContactInformation = () => {
 
         const localMobile = primaryContact
 
-        axios.get(`http://localhost:8080/api/users/${email}/${primaryMob}`)
+        axios.get(`http://tutorapp-server.vercel.app/api/users/${email}/${primaryMob}`)
             .then((response) => {
                 //console.log(response);
                 if (response?.data?.exist) {
@@ -162,7 +162,7 @@ const RequestContactInformation = () => {
                     });
                 } else if (!response?.data?.exist) {
 
-                    axios.post(`http://localhost:8080/api/users`, newUsersPayload)
+                    axios.post(`http://tutorapp-server.vercel.app/api/users`, newUsersPayload)
                         .then((userRes) => {
                             //console.log("User created", userRes);
                            
@@ -187,7 +187,7 @@ const RequestContactInformation = () => {
                                     address2: Addressline2,
                                 };
                                 //console.log("profilePayLoad", profilePayLoad);
-                                axios.post("http://localhost:8080/api/profile", profilePayLoad)
+                                axios.post("http://tutorapp-server.vercel.app/api/profile", profilePayLoad)
                                     .then((profileRes) => {
                                         //console.log("profile created", profileRes);
                                         if (profileRes.statusText == "OK") {
@@ -201,7 +201,7 @@ const RequestContactInformation = () => {
                                                 institutelocation: locationInstitute
                                             }
                                             //console.log("personalInfoPayload", personalInfoPayload);
-                                            axios.post("http://localhost:8080/api/studentpersonalinfo", personalInfoPayload)
+                                            axios.post("http://tutorapp-server.vercel.app/api/studentpersonalinfo", personalInfoPayload)
                                                 .then((personalRes) => {
                                                     //console.log("Personal info created", personalRes);
                                                     if (personalRes.statusText == "OK") {
@@ -220,14 +220,14 @@ const RequestContactInformation = () => {
                                                             }
                                                         ]
                                                         //console.log("addressPayload", addressPayload);
-                                                        axios.post("http://localhost:8080/api/address", addressPayload)
+                                                        axios.post("http://tutorapp-server.vercel.app/api/address", addressPayload)
                                                             .then((addressRes) => {
                                                                 //console.log("address created", addressRes);
                                                                 if (addressRes.statusText == "OK") {
                                                                     const studentLevelPayload = storedData[0]
                                                                     studentLevelPayload.userid = userRes?.data?.data?.id
                                                                     //console.log("studentLevelPayload", studentLevelPayload);
-                                                                    axios.post("http://localhost:8080/api/studentlevel", studentLevelPayload)
+                                                                    axios.post("http://tutorapp-server.vercel.app/api/studentlevel", studentLevelPayload)
                                                                         .then((studentRes) => {
                                                                             //console.log("studentlevel created", studentRes);
                                                                             if (studentRes.statusText == "OK") {
@@ -235,7 +235,7 @@ const RequestContactInformation = () => {
                                                                                 studentSubjectPayload.userid = userRes?.data?.data?.id
                                                                                 //console.log("studentSubjectPayload", studentSubjectPayload);
 
-                                                                                axios.post("http://localhost:8080/api/teachersubject/studentSubject", studentSubjectPayload)
+                                                                                axios.post("http://tutorapp-server.vercel.app/api/teachersubject/studentSubject", studentSubjectPayload)
                                                                                     .then((subRes) => {
                                                                                         //console.log("subject created", subRes);
                                                                                         if (subRes.statusText == "OK") {

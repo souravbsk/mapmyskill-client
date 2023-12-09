@@ -29,7 +29,7 @@ const TuitionJobDetailsBlock = ({ tuitionDetails, refetch, setRefetch }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/contactsviewed/${user?.userid}`)
+      .get(`http://tutorapp-server.vercel.app/api/contactsviewed/${user?.userid}`)
       .then((response) => {
         console.log("uncloked response", response);
         const unlock = response.data.map((item) => {
@@ -45,7 +45,7 @@ const TuitionJobDetailsBlock = ({ tuitionDetails, refetch, setRefetch }) => {
   const handleUnlock = () => {
     axios
       .get(
-        `http://localhost:8080/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
+        `http://tutorapp-server.vercel.app/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
       )
       .then((res1) => {
         console.log("unlock res1", res1.data);
@@ -75,7 +75,7 @@ const TuitionJobDetailsBlock = ({ tuitionDetails, refetch, setRefetch }) => {
 
           axios
             .post(
-              `http://localhost:8080/api/contactsviewed`,
+              `http://tutorapp-server.vercel.app/api/contactsviewed`,
               contactViewedPayload
             )
             .then((res2) => {
@@ -84,7 +84,7 @@ const TuitionJobDetailsBlock = ({ tuitionDetails, refetch, setRefetch }) => {
               if (res2.statusText == "OK") {
                 axios
                   .put(
-                    `http://localhost:8080/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
+                    `http://tutorapp-server.vercel.app/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
                   )
                   .then((res3) => {
                     console.log("plan update res", res3);

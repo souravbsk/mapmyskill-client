@@ -54,7 +54,7 @@ const StudentInformation = ({
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/segment`)
+      .get(`http://tutorapp-server.vercel.app/api/segment`)
       .then((response) => {
         // console.log(response.data);
         if (response?.data) {

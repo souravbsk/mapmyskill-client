@@ -7,7 +7,7 @@ const MatchingTeacherFilter = ({ tutorsData, handleFilterData }) => {
   const [selectedSegment, setSelectedSegment] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/segment").then((res) => {
+    axios.get("http://tutorapp-server.vercel.app/api/segment").then((res) => {
       setSegments(res?.data);
     });
   }, []);

@@ -14,7 +14,7 @@ const Enquiries = () => {
   const [enquiriesData, setEnquiriesData] = useState([])
 
   useEffect(() => {
-      axios.get(`http://localhost:8080/api/messagetoteacher/${user?.userid}`)
+      axios.get(`http://tutorapp-server.vercel.app/api/messagetoteacher/${user?.userid}`)
         .then((res) => {
           // console.log("enquiries", res.data)
          setEnquiriesData(res?.data)

@@ -8,7 +8,7 @@ const TeacherAllReviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
     if (user) {
-      axios(`http://localhost:8080/api/userreviews/${user?.userid}`).then(
+      axios(`http://tutorapp-server.vercel.app/api/userreviews/${user?.userid}`).then(
         (res) => {
           if (res?.data?.success) {
             setReviews(res?.data?.data);

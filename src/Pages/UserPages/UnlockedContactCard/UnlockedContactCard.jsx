@@ -27,7 +27,7 @@ const UnlockedContactCard = ({tutorsData }) => {
     <div className='flex items-center gap-10 border-2 px-5'>
         <div>
             <div>
-                <img height="300px" width="250px" src={`http://localhost:8080/${tutorsData.profileimagepath}`} alt='teacher-image' ></img>
+                <img height="300px" width="250px" src={`http://tutorapp-server.vercel.app/${tutorsData.profileimagepath}`} alt='teacher-image' ></img>
             </div>
             <div className='text-center'>{`#${tutorsData.userid}`}</div>
        

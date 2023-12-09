@@ -12,7 +12,7 @@ const useAuthChanged = () => {
           return;
         }
         const res = await axios.get(
-          "http://localhost:8080/api/users/checkAuth",
+          "http://tutorapp-server.vercel.app/api/users/checkAuth",
           {
             headers: {
               "Content-Type": "application/json",

@@ -14,7 +14,7 @@ const TeacherPersonalInformation = () => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:8080/api/personalinfo/byUserId/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/personalinfo/byUserId/${user?.userid}`)
         .then((res) => {
           //   //console.log(res);
           setPersonalInfo(res?.data);

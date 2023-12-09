@@ -29,7 +29,7 @@ function TeacherBasicDetails() {
   useEffect(() => {
     if (user?.userid) {
       axios
-        .get(`http://localhost:8080/api/profile/byUserId/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/profile/byUserId/${user?.userid}`)
         .then((response) => {
           if (response?.data) {
             //console.log("hello world", response?.data);
@@ -43,7 +43,7 @@ function TeacherBasicDetails() {
             if (response.statusText == "OK") {
               axios
                 .get(
-                  `http://localhost:8080/api/personalinfo/byUserId/${user?.userid}`
+                  `http://tutorapp-server.vercel.app/api/personalinfo/byUserId/${user?.userid}`
                 )
                 .then((res) => {
                   //console.log(res);
@@ -90,7 +90,7 @@ function TeacherBasicDetails() {
 
         axios
           .put(
-            `http://localhost:8080/api/profile/${user?.userid}`,
+            `http://tutorapp-server.vercel.app/api/profile/${user?.userid}`,
             profilePayload
           )
           .then((response) => {
@@ -102,7 +102,7 @@ function TeacherBasicDetails() {
               //console.log(personalInfoPayload);
               axios
                 .put(
-                  `http://localhost:8080/api/personalinfo/${user?.userid}`,
+                  `http://tutorapp-server.vercel.app/api/personalinfo/${user?.userid}`,
                   personalInfoPayload
                 )
                 .then((res) => {

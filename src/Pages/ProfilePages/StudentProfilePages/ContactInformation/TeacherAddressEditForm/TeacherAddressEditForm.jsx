@@ -204,7 +204,7 @@ function TeacherAddressEditForm({
         if (result.isConfirmed) {
           axios
             .put(
-              `http://localhost:8080/api/users/updateByUserId/${user.userid}`,
+              `http://tutorapp-server.vercel.app/api/users/updateByUserId/${user.userid}`,
               userPayload
             )
             .then((res) => {
@@ -222,20 +222,20 @@ function TeacherAddressEditForm({
                 };
                 axios
                   .put(
-                    `http://localhost:8080/api/profile/${user.userid}`,
+                    `http://tutorapp-server.vercel.app/api/profile/${user.userid}`,
                     profilePayload
                   )
                   .then((res) => {
                     if (res.data.success) {
                       axios
                         .delete(
-                          `http://localhost:8080/api/address/${user.userid}`
+                          `http://tutorapp-server.vercel.app/api/address/${user.userid}`
                         )
                         .then((deleteres) => {
                           if (deleteres?.data?.success) {
                             axios
                               .post(
-                                `http://localhost:8080/api/address`,
+                                `http://tutorapp-server.vercel.app/api/address`,
                                 userAddress
                               )
                               .then((res) => {

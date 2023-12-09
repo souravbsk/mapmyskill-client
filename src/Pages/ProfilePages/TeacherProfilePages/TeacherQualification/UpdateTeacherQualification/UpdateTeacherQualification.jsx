@@ -30,13 +30,13 @@ const UpdateTeacherQualification = ({
 
     // qulification data update
     axios
-      .put(`http://localhost:8080/api/teacherschooling`, updateClasses)
+      .put(`http://tutorapp-server.vercel.app/api/teacherschooling`, updateClasses)
       .then((res) => {
         //console.log(res);
         if (res?.data?.success) {
           axios
             .post(
-              "http://localhost:8080/api/teachereducation/updateTeacherEducation",
+              "http://tutorapp-server.vercel.app/api/teachereducation/updateTeacherEducation",
               blocks
             )
             .then((res) => {
@@ -64,13 +64,13 @@ const UpdateTeacherQualification = ({
                       };
                       axios
                         .delete(
-                          `http://localhost:8080/api/systemlistdata/lang-update/${user?.userid}/${langValue?.value}`
+                          `http://tutorapp-server.vercel.app/api/systemlistdata/lang-update/${user?.userid}/${langValue?.value}`
                         )
                         .then((deleteRes) => {
                           if (deleteRes?.data.success) {
                             axios
                               .post(
-                                `http://localhost:8080/api/systemlistdata`,
+                                `http://tutorapp-server.vercel.app/api/systemlistdata`,
                                 payloadLang
                               )
                               .then((insertres) => {

@@ -13,7 +13,7 @@ const SuggestSidebar = ({ paramid }) => {
   useEffect(() => {
     if (user) {
       axios
-        .get(`http://localhost:8080/api/studentlevel?user=${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/studentlevel?user=${user?.userid}`)
         .then((res) => {
           if (res.statusText == "OK") {
             const restTuitonData = res?.data?.filter(

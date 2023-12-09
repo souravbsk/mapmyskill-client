@@ -75,12 +75,12 @@ const TeachingExperience = () => {
 
     if (user) {
       axios
-        .post("http://localhost:8080/api/teachertraininglevel", blocks)
+        .post("http://tutorapp-server.vercel.app/api/teachertraininglevel", blocks)
         .then((boardres) => {
           if (boardres.data.success) {
             console.log(blocks);
             axios
-              .post("http://localhost:8080/api/teachersubject", blocks)
+              .post("http://tutorapp-server.vercel.app/api/teachersubject", blocks)
               .then((subjectRes) => {
                 if (subjectRes.data.success) {
                   const teachingLocationPayload = {
@@ -90,7 +90,7 @@ const TeachingExperience = () => {
                   };
                   axios
                     .post(
-                      "http://localhost:8080/api/systemlistdata",
+                      "http://tutorapp-server.vercel.app/api/systemlistdata",
                       teachingLocationPayload
                     )
                     .then((teachingLocationres) => {
@@ -107,7 +107,7 @@ const TeachingExperience = () => {
                         };
                         axios
                           .post(
-                            "http://localhost:8080/api/teacherproficiency",
+                            "http://tutorapp-server.vercel.app/api/teacherproficiency",
                             proficiencyPayload
                           )
                           .then((proficiencyres) => {

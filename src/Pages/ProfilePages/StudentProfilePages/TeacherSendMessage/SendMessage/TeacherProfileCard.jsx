@@ -22,7 +22,7 @@ const TeacherProfileCard = ({id,subjects}) => {
 
   useEffect(() => {
     if(id && languageValue && interestedInValue){
-      axios.get(`http://localhost:8080/api/users/find-teachers-by-userid/${id}?locationId=${interestedInValue}&languageId=${languageValue}`)
+      axios.get(`http://tutorapp-server.vercel.app/api/users/find-teachers-by-userid/${id}?locationId=${interestedInValue}&languageId=${languageValue}`)
           .then((response) => {
               response.data.forEach(tutor => {
                   const tAge = covertAge(tutor.dob)
@@ -44,7 +44,7 @@ const TeacherProfileCard = ({id,subjects}) => {
     <div className="p-5 border mt-3 ">
       <div className="py-5 border-b">
         <figure className="flex items-center justify-center mb-5">
-          <img className="h-44" src={`http://localhost:8080/${teacherDetails?.profileimagepath}`} alt="" />
+          <img className="h-44" src={`http://tutorapp-server.vercel.app/${teacherDetails?.profileimagepath}`} alt="" />
         </figure>
         <div className="text-center">
          <div>

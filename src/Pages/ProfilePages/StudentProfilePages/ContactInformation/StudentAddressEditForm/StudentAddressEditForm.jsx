@@ -110,7 +110,7 @@ const StudentAddressEditForm = ({
         if (result.isConfirmed) {
           axios
             .put(
-              `http://localhost:8080/api/users/updateByUserId/${user.userid}`,
+              `http://tutorapp-server.vercel.app/api/users/updateByUserId/${user.userid}`,
               userPayload
             )
             .then((res) => {
@@ -128,7 +128,7 @@ const StudentAddressEditForm = ({
                 };
                 axios
                   .put(
-                    `http://localhost:8080/api/profile/${user.userid}`,
+                    `http://tutorapp-server.vercel.app/api/profile/${user.userid}`,
                     profilePayload
                   )
                   .then((res) => {
@@ -144,7 +144,7 @@ const StudentAddressEditForm = ({
                       };
                       axios
                         .put(
-                          `http://localhost:8080/api/address/updateByUserId/${user.userid}`,
+                          `http://tutorapp-server.vercel.app/api/address/updateByUserId/${user.userid}`,
                           addressPayload
                         )
                         .then((response) => {

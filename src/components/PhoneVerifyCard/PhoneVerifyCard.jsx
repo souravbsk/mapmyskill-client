@@ -62,7 +62,7 @@ const PhoneVerifyCard = ({ phone, userId, setRefetch, refetch, mobile }) => {
             isContactVarified: "Y",
           };
           axios
-            .put(`http://localhost:8080/api/profile/${userId}`, phoneVerify)
+            .put(`http://tutorapp-server.vercel.app/api/profile/${userId}`, phoneVerify)
             .then((res) => {
               if (res.data.success) {
                 setLoading(false);
@@ -117,7 +117,7 @@ const PhoneVerifyCard = ({ phone, userId, setRefetch, refetch, mobile }) => {
     }
 
     axios
-      .put(`http://localhost:8080/api/users/updateMobileEmail/${userId}`, {
+      .put(`http://tutorapp-server.vercel.app/api/users/updateMobileEmail/${userId}`, {
         mobile: mobile,
       })
       .then((res) => {
@@ -127,7 +127,7 @@ const PhoneVerifyCard = ({ phone, userId, setRefetch, refetch, mobile }) => {
             isContactVarified: "N",
           };
           axios
-            .put(`http://localhost:8080/api/profile/${userId}`, phoneUpdate)
+            .put(`http://tutorapp-server.vercel.app/api/profile/${userId}`, phoneUpdate)
             .then((res) => {
               if (res.data.success) {
                 console.log(res);

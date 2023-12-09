@@ -8,7 +8,7 @@ const PlanStatus = ({ row, reFetch, setRefetch }) => {
     const planid = rowVlaue?.original?.planid;
 
     axios
-      .put(`http://localhost:8080/api/subscriptionplans/update/${planid}`, {
+      .put(`http://tutorapp-server.vercel.app/api/subscriptionplans/update/${planid}`, {
         status: switchValue,
       })
       .then((res) => {

@@ -36,7 +36,7 @@ const EnquiriesCard = ({ enquiryDatas }) => {
     
 
     enquiryDatas?.userid ? (
-      axios.get(`http://localhost:8080/api/profile/${enquiryDatas?.userid}`)
+      axios.get(`http://tutorapp-server.vercel.app/api/profile/${enquiryDatas?.userid}`)
         .then((response) => {
           console.log(response)
           response?.data ? setProfileData(response?.data) : null
@@ -48,7 +48,7 @@ const EnquiriesCard = ({ enquiryDatas }) => {
         })
     ) : null
 
-    axios.get(`http://localhost:8080/api/contactsviewed/${user?.userid}`)
+    axios.get(`http://tutorapp-server.vercel.app/api/contactsviewed/${user?.userid}`)
       .then((response) => {
         console.log("uncloked response", response)
         // response?.data ? setContactsUnlocked(response?.data) : null
@@ -67,7 +67,7 @@ const EnquiriesCard = ({ enquiryDatas }) => {
   const handleUnlock = () => {
     // setShowContact(!showContact)
 
-    axios.get(`http://localhost:8080/api/subscriptionusers/${user?.userid}?plantype=${plantype}`)
+    axios.get(`http://tutorapp-server.vercel.app/api/subscriptionusers/${user?.userid}?plantype=${plantype}`)
       .then((res1) => {
         console.log("unlock res1 data", res1.data);
         // res1?.data ? setSubscriptionData(res1?.data) : null
@@ -96,13 +96,13 @@ const EnquiriesCard = ({ enquiryDatas }) => {
             viewedusers: enquiryDatas?.userid
           }
 
-          axios.post(`http://localhost:8080/api/contactsviewed`, contactViewedPayload)
+          axios.post(`http://tutorapp-server.vercel.app/api/contactsviewed`, contactViewedPayload)
             .then(((res2) => {
               console.log("contactsviewed response", res2)
               // console.log("plan id", res1?.data[0]?.subscriptionusers_id)
 
               if (res2.statusText == "OK") {
-                axios.put(`http://localhost:8080/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`)
+                axios.put(`http://tutorapp-server.vercel.app/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`)
                   .then((res3) => {
                     console.log("plan update res", res3)
                     setRefetch(!refetch)
@@ -142,7 +142,7 @@ const EnquiriesCard = ({ enquiryDatas }) => {
           {/*image*/}
           <div className="flex flex-col gap-5  px-8 py-4">
             <div className="mx-auto">
-              <img src={`http://localhost:8080/${profileData?.profileimagepath}`} className="h-[200px] " />
+              <img src={`http://tutorapp-server.vercel.app/${profileData?.profileimagepath}`} className="h-[200px] " />
             </div>
             <h1 className="text-2xl font-semibold text-center">{profileData?.poc}</h1>
           </div>

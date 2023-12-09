@@ -32,7 +32,7 @@ const TeachersViewDetails = () => {
     if (id && languageValue && interestedInValue) {
       axios
         .get(
-          `http://localhost:8080/api/users/find-teachers-by-userid/${id}?locationId=${interestedInValue}&languageId=${languageValue}`
+          `http://tutorapp-server.vercel.app/api/users/find-teachers-by-userid/${id}?locationId=${interestedInValue}&languageId=${languageValue}`
         )
         .then((response) => {
           response.data.forEach((tutor) => {

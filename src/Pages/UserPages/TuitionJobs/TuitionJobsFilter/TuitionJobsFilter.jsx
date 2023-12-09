@@ -18,7 +18,7 @@ const TuitionJobsFilter = ({
   const [segments, setSegments] = useState([]);
   
   useEffect(() => {
-    axios.get("http://localhost:8080/api/segment").then((res) => {
+    axios.get("http://tutorapp-server.vercel.app/api/segment").then((res) => {
       setSegments(res?.data);
     });
   }, []);

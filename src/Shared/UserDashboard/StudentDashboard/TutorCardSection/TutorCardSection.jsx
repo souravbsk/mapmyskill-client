@@ -24,7 +24,7 @@ const TutorCardSection = ({ studentLevelSegmentId }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/users/find-teachers-by-role/3")
+      .get("http://tutorapp-server.vercel.app/api/users/find-teachers-by-role/3")
       .then((response) => {
         response.data.forEach((tutor) => {
           const tAge = covertAge(tutor.dob);

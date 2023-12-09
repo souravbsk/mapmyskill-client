@@ -45,13 +45,13 @@ const UpdateTeacherProf = ({ segmentsData,setEdit, isEdit, ProficiencyDetails })
           );
           axios
             .delete(
-              `http://localhost:8080/api/teachertraininglevel/delete/${user?.userid}/${dataValue?.value}`
+              `http://tutorapp-server.vercel.app/api/teachertraininglevel/delete/${user?.userid}/${dataValue?.value}`
             )
             .then((res) => {
               if (res.data.success) {
                 axios
                   .post(
-                    "http://localhost:8080/api/teachertraininglevel",
+                    "http://tutorapp-server.vercel.app/api/teachertraininglevel",
                     blocks
                   )
                   .then((boardres) => {
@@ -59,7 +59,7 @@ const UpdateTeacherProf = ({ segmentsData,setEdit, isEdit, ProficiencyDetails })
                       console.log(blocks);
                       axios
                         .post(
-                          "http://localhost:8080/api/teachersubject",
+                          "http://tutorapp-server.vercel.app/api/teachersubject",
                           blocks
                         )
                         .then((subjectRes) => {
@@ -71,7 +71,7 @@ const UpdateTeacherProf = ({ segmentsData,setEdit, isEdit, ProficiencyDetails })
                             };
                             axios
                               .post(
-                                "http://localhost:8080/api/systemlistdata",
+                                "http://tutorapp-server.vercel.app/api/systemlistdata",
                                 teachingLocationPayload
                               )
                               .then((teachingLocationres) => {
@@ -88,7 +88,7 @@ const UpdateTeacherProf = ({ segmentsData,setEdit, isEdit, ProficiencyDetails })
                                   };
                                   axios
                                     .post(
-                                      "http://localhost:8080/api/teacherproficiency",
+                                      "http://tutorapp-server.vercel.app/api/teacherproficiency",
                                       proficiencyPayload
                                     )
                                     .then((proficiencyres) => {

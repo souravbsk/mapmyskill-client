@@ -93,7 +93,7 @@ const UpdateSubscription = ({
 
     axios
       .put(
-        `http://localhost:8080/api/subscriptionplans/update/${planData?.planid}`,
+        `http://tutorapp-server.vercel.app/api/subscriptionplans/update/${planData?.planid}`,
         UpdatePlan
       )
       .then((res) => {

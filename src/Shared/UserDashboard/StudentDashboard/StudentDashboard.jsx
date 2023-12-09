@@ -31,7 +31,7 @@ const StudentDashboard = () => {
     if (user) {
       axios
         .get(
-          `http://localhost:8080/api/studentlevel/findallbyid/${user?.userid}`
+          `http://tutorapp-server.vercel.app/api/studentlevel/findallbyid/${user?.userid}`
         )
         .then((response) => {
           const allsegmentids = response?.data?.data.map(
@@ -52,7 +52,7 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/contactsviewed/${user?.userid}`)
+      .get(`http://tutorapp-server.vercel.app/api/contactsviewed/${user?.userid}`)
       .then((res2) => {
         // console.log("Res2", res2.data);
         // const filtered = res2.data.filter((item1) => {

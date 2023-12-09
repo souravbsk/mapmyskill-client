@@ -29,7 +29,7 @@ const ViewAllTeachersDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/users/findallbyrole/3`)
+      .get(`http://tutorapp-server.vercel.app/api/users/findallbyrole/3`)
       .then((response) => {
         response.data.forEach((tutor) => {
           const tAge = covertAge(tutor.dob);

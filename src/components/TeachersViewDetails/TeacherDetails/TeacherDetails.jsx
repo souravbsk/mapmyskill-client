@@ -11,7 +11,7 @@ const TeacherDetails = ({tutorsData,id}) => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
       if (id) {
-        axios(`http://localhost:8080/api/userreviews/${id}`).then(
+        axios(`http://tutorapp-server.vercel.app/api/userreviews/${id}`).then(
           (res) => {
             if (res?.data?.success) {
               setReviews(res?.data?.data);

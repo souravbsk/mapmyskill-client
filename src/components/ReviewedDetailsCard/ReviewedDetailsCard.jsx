@@ -8,7 +8,7 @@ const ReviewedDetailsCard = ({ review }) => {
     <div className="border-2 shadow-md">
       <div className="px-5 border-b-2 flex gap-8 py-4">
         <figure className="w-24 h-24 rounded-full" >
-          <img className="w-full h-full" src={`http://localhost:8080/${review?.image}`} alt="" />
+          <img className="w-full h-full" src={`http://tutorapp-server.vercel.app/${review?.image}`} alt="" />
         </figure>
         <div>
             <h3 className="text-2xl mb-4 font-semibold">{review?.name}</h3>

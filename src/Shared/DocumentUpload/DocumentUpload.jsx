@@ -35,7 +35,7 @@ const DocumentUpload = () => {
   useEffect(() => {
     if (user?.userid) {
       axios
-        .get(`http://localhost:8080/api/documents/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/documents/${user?.userid}`)
         .then((response) => {
           console.log("Image DB Response",response);
           if (response.data.success) {
@@ -97,7 +97,7 @@ const DocumentUpload = () => {
     formData.append("verifystatus", status);
 
     axios
-      .post(`http://localhost:8080/api/documents/upload`, formData)
+      .post(`http://tutorapp-server.vercel.app/api/documents/upload`, formData)
       .then((response) => {
         if (response?.data?.result?.affectedRows > 0) {
           Swal.fire({
@@ -171,7 +171,7 @@ const DocumentUpload = () => {
               <p>Front Image</p>
               {imageFront.length > 0 ? (
                 <div className="border-2">
-                  <img src={`http://localhost:8080/${imageFront}`}></img>
+                  <img src={`http://tutorapp-server.vercel.app/${imageFront}`}></img>
                 </div>
               ) : (
                 <Skeleton variant="rectangular" width={210} height={118} />
@@ -181,7 +181,7 @@ const DocumentUpload = () => {
               <p>Back Image</p>
               {imageBack.length > 0 ? (
                 <div className="border-2">
-                  <img src={`http://localhost:8080/${imageBack}`}></img>
+                  <img src={`http://tutorapp-server.vercel.app/${imageBack}`}></img>
                 </div>
               ) : (
                 <Skeleton variant="rectangular" width={210} height={118} />
@@ -255,7 +255,7 @@ const DocumentUpload = () => {
                               selectedImage
                                 ? selectedImage
                                 : imageFront.length > 0
-                                ? `http://localhost:8080/${imageFront}`
+                                ? `http://tutorapp-server.vercel.app/${imageFront}`
                                 : ""
                             }
                           ></img>
@@ -279,7 +279,7 @@ const DocumentUpload = () => {
                               selectedImageBack
                                 ? selectedImageBack
                                 : imageBack.length > 0
-                                ? `http://localhost:8080/${imageBack}`
+                                ? `http://tutorapp-server.vercel.app/${imageBack}`
                                 : ""
                             }
                           ></img>

@@ -11,7 +11,7 @@ const TuitionJobs = () => {
   useEffect(() => {
     if (user?.userid) {
       axios
-        .get(`http://localhost:8080/api/studentlevel?user=${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/studentlevel?user=${user?.userid}`)
         .then((res) => {
           if (res.statusText == "OK") {
             setTuitionJobs(res?.data);

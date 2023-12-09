@@ -27,7 +27,7 @@ const TeacherProficiencyDetails = () => {
           );
           axios
             .get(
-              `http://localhost:8080/api/teacherproficiency/${user?.userid}?locationId=${dataValue?.value}`
+              `http://tutorapp-server.vercel.app/api/teacherproficiency/${user?.userid}?locationId=${dataValue?.value}`
             )
             .then((res) => {
               if (res?.data) {
@@ -41,12 +41,12 @@ const TeacherProficiencyDetails = () => {
   useEffect(() => {
     if (user?.userid) {
       axios
-        .get(`http://localhost:8080/api/teachertraininglevel/${user?.userid}`)
+        .get(`http://tutorapp-server.vercel.app/api/teachertraininglevel/${user?.userid}`)
         .then((res) => {
           if (res?.data?.success) {
             const segmentData = res?.data?.data;
             axios
-              .get(`http://localhost:8080/api/teachersubject/${user?.userid}`)
+              .get(`http://tutorapp-server.vercel.app/api/teachersubject/${user?.userid}`)
               .then((subRes) => {
                 const subjectData = subRes?.data;
                 const segmentBlock = segmentData.map((segment) => {

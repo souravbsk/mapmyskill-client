@@ -48,7 +48,7 @@ const AllTeacherViewCard = ({ userid, tutorsData }) => {
     userid
       ? axios
           .get(
-            `http://localhost:8080/api/users/find-teachers-by-userid/${userid}?locationId=${locationid}&languageId=${language}`
+            `http://tutorapp-server.vercel.app/api/users/find-teachers-by-userid/${userid}?locationId=${locationid}&languageId=${language}`
           )
           .then((response) => {
             response.data ? setAllData(response.data) : null;
@@ -59,7 +59,7 @@ const AllTeacherViewCard = ({ userid, tutorsData }) => {
       : null;
 
     axios
-      .get(`http://localhost:8080/api/contactsviewed/${user?.userid}`)
+      .get(`http://tutorapp-server.vercel.app/api/contactsviewed/${user?.userid}`)
       .then((response) => {
         console.log("uncloked response", response);
         // response?.data ? setContactsUnlocked(response?.data) : null
@@ -76,7 +76,7 @@ const AllTeacherViewCard = ({ userid, tutorsData }) => {
   const handleUnlock = () => {
     axios
       .get(
-        `http://localhost:8080/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
+        `http://tutorapp-server.vercel.app/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
       )
       .then((res1) => {
         console.log("unlock res1", res1.data);
@@ -106,7 +106,7 @@ const AllTeacherViewCard = ({ userid, tutorsData }) => {
 
           axios
             .post(
-              `http://localhost:8080/api/contactsviewed`,
+              `http://tutorapp-server.vercel.app/api/contactsviewed`,
               contactViewedPayload
             )
             .then((res2) => {
@@ -116,7 +116,7 @@ const AllTeacherViewCard = ({ userid, tutorsData }) => {
               if (res2.statusText == "OK") {
                 axios
                   .put(
-                    `http://localhost:8080/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
+                    `http://tutorapp-server.vercel.app/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
                   )
                   .then((res3) => {
                     console.log("plan update res", res3);
@@ -145,7 +145,7 @@ const AllTeacherViewCard = ({ userid, tutorsData }) => {
             <img
               height="300px"
               width="250px"
-              src={`http://localhost:8080/${tutorsData.profileimagepath}`}
+              src={`http://tutorapp-server.vercel.app/${tutorsData.profileimagepath}`}
               alt="teacher-image"
             ></img>
           </div>

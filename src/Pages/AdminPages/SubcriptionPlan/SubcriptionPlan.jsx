@@ -39,7 +39,7 @@ const SubcriptionPlan = () => {
         console.log(rowValue, "row,value");
         axios
           .delete(
-            `http://localhost:8080/api/subscriptionplans/${rowValue?.planid}`
+            `http://tutorapp-server.vercel.app/api/subscriptionplans/${rowValue?.planid}`
           )
           .then((res) => {
             if (res?.data?.affectedRows > 0) {

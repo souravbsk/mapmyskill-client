@@ -38,7 +38,7 @@ const TeacherViewCard = ({ tutorsData, refetch, setRefetch }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/contactsviewed/${user?.userid}`)
+      .get(`http://tutorapp-server.vercel.app/api/contactsviewed/${user?.userid}`)
       .then((response) => {
         console.log("uncloked response", response);
         // response?.data ? setContactsUnlocked(response?.data) : null
@@ -59,7 +59,7 @@ const TeacherViewCard = ({ tutorsData, refetch, setRefetch }) => {
   const handleUnlock = () => {
     axios
       .get(
-        `http://localhost:8080/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
+        `http://tutorapp-server.vercel.app/api/subscriptionusers/${user?.userid}?plantype=${plantype}`
       )
       .then((res1) => {
         console.log("unlock res1", res1.data);
@@ -89,7 +89,7 @@ const TeacherViewCard = ({ tutorsData, refetch, setRefetch }) => {
 
           axios
             .post(
-              `http://localhost:8080/api/contactsviewed`,
+              `http://tutorapp-server.vercel.app/api/contactsviewed`,
               contactViewedPayload
             )
             .then((res2) => {
@@ -98,7 +98,7 @@ const TeacherViewCard = ({ tutorsData, refetch, setRefetch }) => {
               if (res2.statusText == "OK") {
                 axios
                   .put(
-                    `http://localhost:8080/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
+                    `http://tutorapp-server.vercel.app/api/subscriptionusers/update/${res1?.data[0]?.subscriptionusers_id}`
                   )
                   .then((res3) => {
                     console.log("plan update res", res3);
@@ -128,7 +128,7 @@ const TeacherViewCard = ({ tutorsData, refetch, setRefetch }) => {
               <img
                 height="300px"
                 width="250px"
-                src={`http://localhost:8080/${tutorsData[0]?.profileimagepath}`}
+                src={`http://tutorapp-server.vercel.app/${tutorsData[0]?.profileimagepath}`}
                 alt="teacher-image"
               ></img>
             </div>

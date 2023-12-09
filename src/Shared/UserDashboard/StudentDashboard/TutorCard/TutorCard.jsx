@@ -22,7 +22,7 @@ const TutorCard = ({ allData }) => {
           <div className="flex gap-2 flex-col">
             <div>
               
-              <img src={`http://localhost:8080/${allData?.profileimagepath}`} className="h-[80px] w-[80px] rounded-sm" />
+              <img src={`http://tutorapp-server.vercel.app/${allData?.profileimagepath}`} className="h-[80px] w-[80px] rounded-sm" />
             </div>
             <div className="text-center font-semibold">{`# ${allData?.userid}`}</div>
           </div>

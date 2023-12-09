@@ -83,7 +83,7 @@ const SendMessage = ({ segmentData, id }) => {
     };
 
     axios
-      .post(`http://localhost:8080/api/messagetoteacher`, newRequrement)
+      .post(`http://tutorapp-server.vercel.app/api/messagetoteacher`, newRequrement)
       .then((res) => {
         if (res?.data?.success) {
           Swal.fire({

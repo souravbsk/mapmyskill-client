@@ -26,7 +26,7 @@ const UserProfileImageUpload = ({ userDetails, refetch, setRefetch }) => {
     formData.append("path", userDetails?.profileimagepath);
 
     axios
-      .put(`http://localhost:8080/api/profile/upload/${user?.userid}`, formData)
+      .put(`http://tutorapp-server.vercel.app/api/profile/upload/${user?.userid}`, formData)
       .then((response) => {
         console.log(response);
         if (response?.data?.data?.res?.affectedRows > 0) {
@@ -52,7 +52,7 @@ const UserProfileImageUpload = ({ userDetails, refetch, setRefetch }) => {
           alt={userDetails?.poc}
           src={
             userDetails?.profileimagepath
-              ? `http://localhost:8080/${userDetails?.profileimagepath}`
+              ? `http://tutorapp-server.vercel.app/${userDetails?.profileimagepath}`
               : img
           }
           sx={{ width: 80, height: 80 }}

@@ -11,7 +11,7 @@ const UserNameTable = ({ handleViewCard,reFetch }) => {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/documents`)
+    axios.get(`http://tutorapp-server.vercel.app/api/documents`)
     .then(res => {
       console.log(res);
       if(res?.data?.success){
